@@ -82,7 +82,7 @@ if people < cats:
 if people < dogs:
     print("The world is drooled on!")
 
-if people > dogs
+if people > dogs:
     print("The world is dry!")
 
 
