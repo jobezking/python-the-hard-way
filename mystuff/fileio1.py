@@ -1,6 +1,7 @@
 #"x" - Create - will create a file, returns an error if the file exists
 #"a" - Append - will create a file if the specified file does not exists
 #"w" - Write - will create a file if the specified file does not exists
+# https://www.geeksforgeeks.org/open-a-file-in-python/
 
 test_file = "test.txt"
 
@@ -17,7 +18,19 @@ except Exception as e:
     print(f"An error occurred: {e}")
 
 file = open(test_file, 'r')
-file_content = file.read()
-test_file_processed = open("debug.log", "x")
-print("File Content:\n", file_content)
+test_file_processed = open("debug.log", "a+")
+#reads and prints entire file. Just done for testing but doesn't suit our purposes
+#file_content = file.read()
+#print("File Content:\n", file_content)
+debug_s="ccc"
+line = file.readline()
+while line:
+    if (line.find(debug_s)):
+        print("Hello World")
+        test_file_processed.write(line)
+    line = file.readline()
+
+test_file_processed_output = test_file_processed.read()
+print("File Content:\n", test_file_processed_output)
 file.close()
+test_file_processed.close()
