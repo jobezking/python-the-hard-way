@@ -25,8 +25,8 @@ test_file_processed = open("debug.log", "a+")
 debug_s="ccc"
 line = file.readline()
 while line:
-    if (line.find(debug_s)):
-        print("Hello World")
+    if (line.find(debug_s) != -1):
+        print(line)
         test_file_processed.write(line)
     line = file.readline()
 
