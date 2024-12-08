@@ -18,7 +18,7 @@ except Exception as e:
     print(f"An error occurred: {e}")
 
 file = open(test_file, 'r')
-test_file_processed = open("debug.log", "a+")
+test_file_processed = open("debug.log", 'a')
 #reads and prints entire file. Just done for testing but doesn't suit our purposes
 #file_content = file.read()
 #print("File Content:\n", file_content)
@@ -30,6 +30,8 @@ while line:
         test_file_processed.write(line)
     line = file.readline()
 
+test_file_processed.close()
+test_file_processed = open("debug.log", 'r')
 test_file_processed_output = test_file_processed.read()
 print("File Content:\n", test_file_processed_output)
 file.close()
