@@ -25,3 +25,29 @@ for number in numbers:
         print(f"{number} is even")
     else:
         print(f"{number} is odd")
+
+#this DOES NOT alter the list!!!
+books = ["Book A", "Book B", "Book C"]
+
+target_book = "Book B"
+
+for book in books:
+    if book == target_book:
+        print(f"{target_book} found")
+        book = "checked out"
+    else:
+        continue
+print(books)
+
+#to update the list!
+books = ["Book A", "Book B", "Book C"]
+
+target_book = "Book B"
+
+for i in range(len(books)):
+  if books[i] == target_book:
+    print(f"{target_book} found")
+    books[i] = "checked out"
+    break
+
+print(books) 
