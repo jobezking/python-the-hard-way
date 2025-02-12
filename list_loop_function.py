@@ -16,3 +16,12 @@ word_to_count = "happy"
 sentence = "In a happy home, a happy heart creates a happy space."
 # This will call the created function
 get_word_count(word_to_count, sentence)
+
+numbers = [3, 9, 1, 10, 5, 2, 8]
+
+### Your code here
+for number in numbers:
+    if number%2 == 0:
+        print(f"{number} is even")
+    else:
+        print(f"{number} is odd")
