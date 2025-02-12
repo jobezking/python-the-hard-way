@@ -10,7 +10,7 @@ print(grocery_list[len(grocery_list) - 1])
 #more readable
 last_element = len(grocery_list) - 1
 print(grocery_list[last_element])
-#access and print item 0 through item 2 of list:
+#access and print item 0 through item 2 of list (slicing): 
 print(grocery_list[0:2])
 
 #Scenario: You have a list of scores for students on an examination, and you'd like to calculate the average. 
