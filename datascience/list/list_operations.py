@@ -25,6 +25,10 @@ grocery_list.count(x)       #Counts how many times x appears in the list.
 
 grocery_list.index(x)       #Tells you the position of the first x in the list.
 
+grocery_list.pop()          #Removes and returns the last item in the list, similar to crossing off the final task on your list.
+
+del grocery_list            #deletes lists and other mutable objects, variables or specific elements within mutable data structures like lists and dicts
+
 if x in grocery_list:       #Checks if x is in the list.
     print(f"{x} is here")
 
@@ -39,3 +43,23 @@ shopping_cart.append("milk")
 # Print the contents of the shopping cart
 for item in shopping_cart:
     print(item)
+
+# Create a dictionary to store contact information
+contacts = {"Alice": "555-1234", "Bob": "555-5678", "Carol": "555-9012"}
+
+# Look up Bob's phone number
+bobs_phone = contacts["Bob"]
+print(bobs_phone)
+# Output: 555-5678
+
+# Add a new contact
+contacts["David"] = "555-4321"
+
+# Update Carol's phone number
+contacts["Carol"] = "555-2468"
+
+# Remove Alice's contact information
+del contacts["Alice"]
+
+# Print updated contacts
+print(contacts)
