@@ -44,3 +44,6 @@ products = {
 		"P102": {"name": "Smartphone", "price": 599.99}
 
 		}
+
+# Contact information dictionary with email address as tuple (immutable) and a dictionary with name, grade and phone as key pairs
+alice_dict = {('alice@example.com'):{"name":'Alice', "grade":85, "phone":'123-456-7890'}}
