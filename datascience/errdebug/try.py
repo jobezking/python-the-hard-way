@@ -43,3 +43,4 @@ except KeyError as error:
 # KeyError: raised when a dictionary key is not found
 # AttributeError: raised when an attribute reference or attribute assignment fails
 # SyntaxError: raised if there is a syntax error in code
+# NameError: undefined variable
