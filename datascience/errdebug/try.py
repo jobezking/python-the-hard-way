@@ -15,6 +15,23 @@ except FileNotFoundError:
 except PermissionError:
     print("Error: You do not have permission to access this file.")
 
+########
+
+def get_city_population(populations, city):
+    test = populations.get(city)
+    if test is None:
+            raise KeyError(f'City "{city}" not found in population data.')
+    return test
+
+city_populations = {"New York": 8336817, "Los Angeles": 3979576, "Chicago": 2679044}
+city_name = "Tampa"
+
+try:
+    population = get_city_population(city_populations, city_name)
+    print(f"The population of {city_name} is {population}")
+except KeyError as error:
+    print(error)
+
 #Common Errors
 
 # ZeroDivisionError
