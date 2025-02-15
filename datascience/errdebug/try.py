@@ -1,6 +1,16 @@
 numerator = 7
 denominator = 0
 
+def read_file_contents(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            for line in file:
+                print(line, end="")
+    except FileNotFoundError:
+        print(f"Error: File not found - {file_path}")
+
+read_file_contents("/Users/Example/Documents/my_file.txt")
+
 try:
     result = numerator / denominator
     # this line might raise a ZeroDivisionError
