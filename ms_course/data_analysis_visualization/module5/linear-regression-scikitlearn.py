@@ -43,7 +43,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-y_pred = model.precit(X_test)
+y_pred = model.predict(X_test)
 
 plt.scatter(y_pred, y_pred, c='r', marker='s', label="Prediction")
 plt.scatter(y,y,c='b', marker='x', label="Actual")
